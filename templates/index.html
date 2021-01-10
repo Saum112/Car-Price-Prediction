@@ -9,11 +9,12 @@
 
 <body>
 
-    <div style="color:blue">
+    <div style="color:white">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
-            <h3>Year</h3>
-            <input id="first" name="Year" type="number ">
+            <h2 style="text-align:center">Predictive analysis</h2>
+		<h3>Year</h3><br>
+            <input id="first" name="Year" type="number ",placeholder="Year">
+
             <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
             <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
             <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
@@ -30,7 +31,7 @@
                 <option value="Mannual">Manual Car</option>
                 <option value="Automatic">Automatic Car</option>
             </select>
-            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br><br><button class="register" type="submit ">Selling Price</button>
             <br>
 
 
@@ -48,10 +49,28 @@
 
     <style>
         body {
-            background-color: lightslategray;
-            text-align: center;
-            padding: 0px;
+            background:url("https://imagesvc.timeincapp.com/v3/foundry/image/?q=60&url=https:%2F%2Fs3.amazonaws.com%2Fthe-drive-staging%2Fmessage-editor%252F1533180541072-wdmp_170425_14289.jpg");
+	    background-repeat:no-repeat;
+	    text-align: left;
+		padding_left:120px;
+           
+
         }
+input{
+padding-left:12px;
+}
+h2{
+color:white;
+ position:absolute;
+ top:-20px;
+ left:45%;
+ font-size:45px;
+font-family:gill-sans;
+font-weight:bolder;
+text-align:center;
+text-shadow:4px 4px 4px #ccc ;
+
+}
         
         #research {
             font-size: 18px;
@@ -62,11 +81,11 @@
         
         #box {
             border-radius: 60px;
-            border-color: 45px;
+            border-color: black;
             border-style: solid;
             font-family: cursive;
             text-align: center;
-            background-color: rgb(168, 131, 61);
+            background-color: red;
             font-size: medium;
             position: absolute;
             width: 700px;
@@ -77,17 +96,31 @@
             margin: 0px;
             font-size: 14px;
         }
-        
+        .register{
+border:12px solid transparent;
+width:200px;
+ border-radius:24px;
+color:white;
+background:red;
+position:relative;
+margin:20px;
+}
+.register:hover{
+background:#ff5722;
+transition:0.2s ease;
+}
         #fuel {
             width: 83px;
             height: 43px;
+display:flex;
             text-align: center;
             border-radius: 14px;
             font-size: 20px;
+		
         }
         
         #fuel:hover {
-            background-color: coral;
+            background-color: white;
         }
         
         #research {
@@ -111,7 +144,7 @@
         }
         
         #resea:hover {
-            background-color: coral;
+            background-color: white;
         }
         
         #sub {
@@ -123,7 +156,7 @@
         }
         
         #sub:hover {
-            background-color: darkcyan;
+            background-color: white;
         }
         
         #first {
@@ -156,4 +189,4 @@
     </style>
 </body>
 
-</html>
+
